@@ -80,7 +80,7 @@ include(FetchContent)
 
 FetchContent_Declare(simx
     GIT_REPOSITORY https://github.com/wwwHui/simx
-    GIT_TAG        50dc6ed5e75f2942f534c55fdcbd688d6fcff6e8) # replace with latest revision
+    GIT_TAG        0451e6b3f2bccfedb600dced90d956255db88e52) # replace with latest revision
 
 FetchContent_MakeAvailable(simx)
 
