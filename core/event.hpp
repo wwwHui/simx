@@ -48,7 +48,6 @@ namespace simx {
             // 重载<运算符
             bool operator>(const Event<TimeType> &b) const { return this->time_ > b.time_; }
 
-
     }; // end of class Event
 };  // end of namespace simx
 

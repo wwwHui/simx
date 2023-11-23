@@ -41,7 +41,7 @@ namespace simx {
 
         ~Promise() { if(handle_) handle_.destroy(); }
 
-    }; // end of class Event
+    }; // end of struct Promise
 
 
 };  // end of namespace simx

@@ -41,3 +41,6 @@
 
 # build dir
 /build
+
+# local
+/local

@@ -4,10 +4,7 @@
 simx is a discrete-event simulation framework for C++20.
 
 
-Processes are defined as functions receiving `simx::SimX<> &` as their first argument and returning `simx::Promise`.
-Each process is executed as a coroutine.
-Thus, this framework requires C++20.
-A short example simulating two clocks ticking in different time intervals looks like this:
+Processes are defined as functions receiving `simx::SimX<> &` as their first argument and returning `simx::Promise`. Each process is executed as a coroutine. Thus, this framework requires C++20. A short example simulating two clocks ticking in different time intervals looks like this:
 
 ```c++
 #include <iostream>
@@ -19,14 +16,12 @@ using TimeType = long;
 using Sim = simx::SimX<TimeType>;
 using Promise = simx::Promise;
 
-
 Promise ClockProc(Sim &sim, const std::string &name, long delay) {
     while (true) {
         std::cout<<"time: "<<sim.Now()<<", "<<name<<std::endl;
         co_await sim.Timeout(delay);
     }
 }
-
 
 int main(){
     Sim sim;
@@ -35,7 +30,6 @@ int main(){
     sim.Run(20);
     return 0;
 }
-
 ```
 
 When run, the following output is generated:
@@ -94,6 +88,8 @@ Replace the commit hash with the latest commit hash of simx accordingly.
 ## Reference
 
 [SimCpp20](https://github.com/fschuetz04/simcpp20) is a discrete-event simulation framework for C++20. Actually, I developed Simx because I encountered a memory leak in a traffic project based on SimCpp20, and I didn't have the capability to solve that issue.
+
+[SimPy](https://gitlab.com/team-simpy/simpy) is a process-based discrete-event simulation framework based on standard Python. 
 
 [CppCoroutines](https://github.com/bennyhuo/CppCoroutines)
 
