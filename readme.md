@@ -54,6 +54,7 @@ time: 15, fast
 time: 18, fast
 ```
 
+Other examples can be found in the examples/ folder.
 
 This project uses CMake.
 To build and execute the clocks example, run the following commands:
@@ -61,13 +62,11 @@ To build and execute the clocks example, run the following commands:
 ```shell
 cmake -B build
 cmake --build build
-build/examples/clocks
+build/examples/clock
 ```
 
-The CMake configuration has been tested with GCC (version 10 or later), Clang (version 14 or later) and MSVC.
+The CMake configuration has been tested with GCC (version 10 or later).
 If such a version is available under a different name (for example `g++-10`), you can try `CXX=g++-10 cmake ..` instead of just `cmake ..` to set the C++ compiler command.
-When using an MSVC compiler, it must be of version 19.28 or later (Visual Studio 2019 version 16.8 or later).
-Contributions to improve compiler support are welcome!
 
 If you want to use simx in your project, the easiest option is to use CMake with FetchContent.
 A simple configuration looks like this:
